@@ -1,0 +1,236 @@
+body
+  font-family: $font-family-sans-serif
+  color: $dark-grey
+
+.fade-enter-active, .fade-leave-active
+  transition: opacity .2s
+
+.fade-enter, .fade-leave-to
+  opacity: 0
+
+
+/* -------
+/* LIGHT THEME
+/* ------
+.theme--light
+
+  a
+    color: $primary
+    text-decoration: none
+
+    &.d-flex
+      align-items: center
+
+  h2
+    color: $primary
+    font-size: 1.786em
+
+  &.application
+    font-family: $font-family-sans-serif
+    color: $dark-grey
+
+  &.login__toolbar
+    box-shadow: none
+    background-color: transparent
+    color: $grey
+
+    .v-toolbar__content
+      padding: 20px 28px 0
+
+      .v-toolbar__title
+        font-size: .86em
+        text-transform: uppercase
+        letter-spacing: 2px
+        font-weight: 700
+
+
+  /* -------
+  /* CARD COMPONENT
+  /* ------
+  .v-card
+    border-radius: 20px
+
+    .v-card__actions,
+    .v-card__text
+      padding: 20px
+
+
+  /* -------
+  /* LOGIN CONTAINER
+  /* ------
+  .login__container
+    background-color: #f8f8ff
+
+
+  /* -------
+  /* NAVIGATION
+  /* ------
+  .navigation
+    justify-content: space-between
+    flex-direction: column
+    display: flex
+
+    .navigation__title-logo
+      letter-spacing: 3px
+      font-weight: 700
+      color: $primary
+      font-size: 2em
+      text-align: center
+
+  .navigation__project
+    margin: 3px 0
+
+    > a
+      padding: 10px 0
+      transition: background-color 200ms ease-in-out
+
+      &.router-link-active
+        background-color: lighten($mediumgrey, 7%)
+
+      &:hover
+        background-color: lighten($mediumgrey, 7%)
+
+
+    img
+      border: 1px solid $mediumgrey
+
+
+  /* -------
+  /* TOOLBAR CONTAINER
+  /* ------
+  .toolbar
+    padding: 8px 20px
+    background-color: $lightgrey
+
+
+  /* -------
+  /* SEARCH
+  /* ------
+  .search
+    padding: 0
+
+
+  /* -------
+  /* DASHBOARD
+  /* ------
+  .dashboard
+    max-width: 1200px
+    width: 100%
+    padding: 0 40px
+    margin: 60px auto 0
+
+    .container
+      padding: 20px 0
+
+
+  /* -------
+  /* PROJECT CARD
+  /* ------
+  .project
+    .project__img
+      position: absolute
+      right: 25px
+      top: 25px
+
+      .project__img-img
+        height: 70px
+        width: 70px
+        border: 1px solid $mediumgrey
+        border-radius: 50%
+
+    .v-card__title
+      text-align: left
+
+  /* -------
+  /* RETROS LIST
+  /* ------
+  .retros
+    overflow: hidden
+
+    .v-list__tile
+      color: $primary
+      font-size: .929em
+
+      &:hover
+        background-color: $lightgrey
+        cursor: pointer
+
+      .v-list__tile__title
+        font-weight: bold
+        text-transform: uppercase
+        letter-spacing: 1px
+        width: auto
+        margin-right: 20px
+
+      .v-list__tile__action
+        flex-direction: row
+        align-items: center
+
+        > a
+          color: $dark-grey
+          text-decoration: underline
+          padding-left: 15px
+
+      .v-list__tile__content
+        overflow: initial
+        flex-direction: row
+        align-items: center
+        justify-content: flex-end
+
+  .archived
+    opacity: .85
+
+    .v-list__tile__title,
+    span
+      color: $dark-grey
+      text-decoration: line-through
+
+  /* ------
+  /* RETRO
+  /* ------
+  .retro
+    width: 100%
+    padding: 0 40px
+    margin: 60px auto 0
+
+    .container
+      overflow-x: scroll
+      padding: 20px 0
+      margin: 0
+
+    .retro__column
+      min-width: 298px
+
+    .retro__card-container
+      box-sizing: border-box
+      box-shadow: none
+      background-color: lighten($mediumgrey, 8%)
+      padding: 5px
+      border-radius: 5px
+      position: relative
+
+      .card-container__delete
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 15px
+
+      .card-container__element
+        padding: 15px
+        border-radius: 5px
+        margin-bottom: 10px
+        text-align: left
+
+      > .v-card__text
+        text-align: left
+
+        span
+          font-weight: bold
+
+        a
+          text-align: right
+          font-size: .9em
+          text-decoration: underline
+
+    .retro__pdf-btn
+      align-items: center

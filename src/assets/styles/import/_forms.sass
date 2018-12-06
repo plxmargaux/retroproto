@@ -1,0 +1,61 @@
+.theme--light
+  .v-btn.default
+    @include linearGradient($primary, $secondary)
+    border-radius: 20px
+    padding: 8px 30px
+    color: $white
+    font-size: .86em
+    letter-spacing: 2px
+    font-weight: bold
+    text-transform: uppercase
+    box-shadow: 0px 16px 50px 0px rgba(50, 50, 50, 0.30)
+
+    &.small
+      box-shadow: none
+      padding: 5px 20px
+      font-size: .75em
+      height: 28px
+
+    &:disabled
+      opacity: .8
+      background: $mediumgrey
+
+  .search
+    position: relative
+
+    .search__input
+      padding: 7px 15px 7px 25px
+      line-height: 1
+      background: $mediumgrey
+      border-radius: 7px
+      color: $dark-grey
+      position: relative
+      overflow: hidden
+
+      &::placeholder
+        color: $dark-grey
+
+      &:focus
+        outline: none
+        color: $white
+
+        & + .search__icon
+          color: $white
+
+      &:before
+        content: ''
+        display: block
+        background: $primary
+        position: absolute
+        z-index: 0
+        left: 0
+        height: 35px
+        width: 0
+
+    .search__icon
+      position: absolute
+      top: 50%
+      left: 7px
+      transform: translateY(-50%)
+      color: $dark-grey
+      font-size: 1.429em
